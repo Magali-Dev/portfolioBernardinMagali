@@ -1,0 +1,36 @@
+*{ 
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(63, 58, 59);
+    margin: 0 auto;
+}
+nav{
+    height: 10rem;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(237, 235, 225);
+}
+.image img{
+    height: 10rem;
+}
+nav a{
+    color:rgb(6, 2, 2);
+    font-size: 1.5rem;
+    padding-right: 25px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+nav a:hover{
+    color: rgb(216, 63, 7);
+}
+
+h1{ 
+    text-align: center;
+    font-size: 50px;
+    font-family:"Mea Culpa";
+}
+
+.flex{
+    display: flex;
+}

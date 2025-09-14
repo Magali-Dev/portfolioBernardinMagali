@@ -1,0 +1,204 @@
+/* Variables globales */
+:root {
+  --primary-color: #d32f2f;
+  --secondary-color: #f4f4f9;
+  --accent-color: #ff6f00;
+  --text-color: #212121;
+  --bg-card: #ffffff;
+  --border-radius: 20px;
+  --shadow-card: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* Base / body */
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  color: var(--primary-color);
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 2.5rem;
+}
+
+h2, h3 {
+  font-family: "Poppins", sans-serif;
+  color: var(--primary-color);
+}
+
+
+
+/* Main layout */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Cartes catégories et création pizza */
+.categorie, .creation {
+  background-color: var(--bg-card);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-card);
+  padding: 2rem;
+  flex: 1 1 350px;
+  min-width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.categorie:hover, .creation:hover {
+  transform: translateY(-5px);
+}
+
+/* Formulaires */
+textarea, input, select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+textarea:focus, input:focus, select:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 5px rgba(255,111,0,0.4);
+  outline: none;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  border: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Stock catégories */
+.stock {
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  max-height: 12rem;
+  overflow-y: auto;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+/* Liste des pizzas */
+#stockPizza {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2rem;
+}
+
+/* Cartes pizzas */
+.ma-pizza {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-card);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  width: 100%;
+  max-width: 420px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 1rem auto;
+}
+
+.ma-pizza:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+}
+
+.ma-pizza img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.pizza-details {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pizza-nom {
+  font-family: "Festive", cursive;
+  font-size: 2rem;
+  color: var(--accent-color);
+}
+
+.pizza-ingredients, .pizza-prix, .pizza-categorie {
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.ingredients, .prix, .categorie_pizza {
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+.delete-btn {
+  align-self: flex-start;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--border-radius);
+  background: linear-gradient(135deg, #ff3d00, #d32f2f);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.delete-btn:hover {
+  background: linear-gradient(135deg, #d32f2f, #ff3d00);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+  .ma-pizza {
+    flex-direction: column;
+    width: 90%;
+  }
+  .ma-pizza img, .pizza-details {
+    width: 100%;
+  }
+}
+
+@media (min-width: 700px) {
+  .ma-pizza {
+    flex-direction: row;
+  }
+  .ma-pizza img {
+    width: 50%;
+    height: auto;
+    border-right: 1px solid #ddd;
+    border-bottom: none;
+  }
+  .pizza-details {
+    width: 50%;
+  }
+}

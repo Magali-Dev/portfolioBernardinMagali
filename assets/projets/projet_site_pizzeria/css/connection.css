@@ -1,0 +1,118 @@
+:root {
+  --primary-color: #ea1818;
+  --accent-color: #f5a623;
+  --bg-color: #fff3e0;
+  --text-color: #3b3939;
+  --input-bg: #fff;
+  --input-border: #ccc;
+  --btn-color: #ea1818;
+  --btn-hover: #f5a623;
+  --border-radius: 12px;
+  --shadow-card: 0 8px 20px rgba(0,0,0,0.2);
+  --font-title: 'Festive', cursive;
+  --font-body: 'Mea Culpa', sans-serif;
+}
+
+body {
+  
+  margin: 0;
+  padding: 0;
+  background-color: #3b3939;
+  color: var(--text-color);
+}
+
+h1 {
+  font-family: var(--font-title);
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin: 2rem 0;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  min-height: calc(100vh - 120px); /* espace restant sous le header */
+  padding: 2rem;
+  align-items: center;
+}
+
+.connection {
+  background-color: var(--bg-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-card);
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.connection:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+}
+
+.connexion {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+
+label {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+input {
+  padding: 10px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--input-border);
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+#boutton {
+  width: 100%;
+  padding: 12px;
+  border-radius: var(--border-radius);
+  border: none;
+  background-color: var(--btn-color);
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#boutton:hover {
+  background-color: var(--btn-hover);
+  color: var(--text-color);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 500px) {
+  .connection {
+    padding: 1.5rem;
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  input, #boutton {
+    font-size: 1rem;
+  }
+}

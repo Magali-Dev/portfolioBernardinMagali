@@ -1,0 +1,168 @@
+:root {
+  /* Couleurs principales */
+  --couleur-fond: #0d1117;
+  --couleur-secondaire: #161b22;
+  --couleur-primaire: #2f81f7;
+  --couleur-accent: #6e40c9;
+  --couleur-accent-secondaire: #238636;
+  --couleur-texte: #e6edf3;
+  --couleur-texte-secondaire: #7d8590;
+  --primaire: blue;
+
+  /* Fond alternatif */
+  --fond: var(--couleur-fond);
+  --fond-secondaire: var(--couleur-secondaire);
+   
+
+  /* Bordures et arrondis */
+  --arrondi: 8px;
+
+  /* Ombres */
+  --ombre: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --ombre-survol: 0 8px 24px rgba(47, 129, 247, 0.2);
+
+  /* Dégradés */
+  --degrade-primaire: linear-gradient(135deg, var(--couleur-primaire) 0%, var(--couleur-accent) 100%);
+  --degrade-accent: linear-gradient(135deg, var(--couleur-accent-secondaire) 0%, #2ea043 100%);
+
+  /* Typographie */
+  --police-titre: "Fredericka the Great", cursive;
+  --police-texte: "Inter", sans-serif;
+
+  /* Transitions */
+  --transition: all 0.3s ease-in-out;
+}
+/* HEADER + LOGO + NAVIGATION */ 
+
+.en-tete {
+  background: rgba(13,17,23,0.95);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  padding: 0.5rem 0;
+  transition: background 0.3s ease;
+  border-bottom: 1px solid rgba(47,129,247,0.1);
+}
+.en-tete.scrolled {
+  background: rgba(239, 236, 236, 0.1); /* plus transparent */
+}
+.menu-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid var(--couleur-primaire);
+  padding: 2px;
+  box-shadow: 0 0 10px rgba(47,129,247,0.3);
+  transition: var(--transition);
+}
+.logo img:hover {
+  transform: rotate(10deg);
+  border: 2px solid green;
+}
+
+/* Navigation desktop */
+.liens-navigation {
+  display: flex;
+  gap: 2rem;
+}
+.liens-navigation a {
+  color: var(--couleur-texte-secondaire);
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 0;
+  font-size: 1.5rem;
+}
+.liens-navigation a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: green;
+  transition: var(--transition);
+}
+.liens-navigation a:hover {
+  color: var(--couleur-primaire);
+}
+.liens-navigation a:hover::after {
+  width: 100%;
+}
+/* BOUTON BURGER / MENU MOBILE */
+
+.bouton-menu {
+  display: none; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+}
+
+/* Lignes du burger */
+.ligne-menu {
+  width: 28px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: transform 0.4s ease, opacity 0.4s ease, background 0.4s ease;
+}
+
+/* Transformation en croix */
+.bouton-menu[aria-expanded="true"] .ligne-menu:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+  background: var(--primaire);
+}
+.bouton-menu[aria-expanded="true"] .ligne-menu:nth-child(2) {
+  opacity: 0;
+}
+.bouton-menu[aria-expanded="true"] .ligne-menu:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+  background: var(--primaire);
+}
+
+
+/* MENU MOBILE */
+@media (max-width: 768px) {
+  .bouton-menu {
+    display: flex; /* visible sur mobile */
+  }
+
+  .liens-navigation {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--fond-secondaire);
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: var(--arrondi);
+    box-shadow: var(--ombre);
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .liens-navigation[data-visible="true"] {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  body.menu-ouvert {
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="images/logo_pizza.png">
+  <meta name="description" content="site pour une pizzeria">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Festive&display=swap" rel="stylesheet">
+  <title>Magali's Pizza Picasso</title>
+</head>
+<body>
+  <header>
+    <nav class="flex">
+      <div class="image"><img src="images/logo_pizza.png" alt="logo" /></div>
+      <ul>
+        <a href="index.html">Accueil</a>
+        <a href="html/panier.html">Panier</a>
+        <a href="html/connection.html">Connection</a>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Bienvenue chez Magali's Pizza Picasso</h1>
+
+    <select id="categorieSelect"></select>
+
+    <div id="PizzaStock" class="PizzaStock flex"></div>
+
+    <div class="commande flex">
+      <button type="button" id="commande">Commander</button>
+    </div>
+  </main>
+
+  <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mini projet calculatrice">
+  <link rel="stylesheet" href="calculatrice.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Doto:wght@400;700&display=swap" rel="stylesheet">
+  <title>Mini calculatrice</title>
+</head>
+<body>
+  <main class="main_base flex">
+    <div class="fonction">
+      <p>Changer la couleur de votre calculette</p>
+      <div class="couleur flex">
+        <span data-color="red" class="rouge"></span> 
+        <span data-color="green" class="vert"></span> 
+        <span data-color="blue" class="bleu"></span>
+        <span data-color="yellow" class="jaune"></span>
+        <span data-color="orange" class="orange"></span>
+      </div>
+    </div>
+
+    <div id="calculator_base" class="calculator-base flex">
+      <div class="affichage flex">
+        <input type="text" id="utilisateur" disabled placeholder="Saisir un calcul">
+        <input type="text" id="resultat" disabled placeholder="Résultat">
+      </div>
+
+      <div class="touches">
+        <button data-value="7">7</button>
+        <button data-value="8">8</button>
+        <button data-value="9">9</button>
+        <button data-value="*">x</button>
+
+        <button data-value="4">4</button>
+        <button data-value="5">5</button>
+        <button data-value="6">6</button>
+        <button data-value="-">-</button>
+
+        <button data-value="1">1</button>
+        <button data-value="2">2</button>
+        <button data-value="3">3</button>
+        <button data-value="+">+</button>
+
+        <button class="c" data-action="clear">C</button>
+        <button class="egal" data-action="equals">=</button>
+        <button data-value="0">0</button>
+        <button data-value="/">÷</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="calculatrice.js"></script>
+</body>
+</html>

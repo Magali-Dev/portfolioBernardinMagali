@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Bernardin Bichet Magali – Développeuse Web & Mobile | Portfolio</title>
+    <meta name="keywords" content="Bernardin Bichet Magali, développeuse web, développeuse mobile, React, Flutter, Node.js, développement web, développement mobile, portfolio développeuse, projets web, projets mobiles, applications web, applications mobiles, développement front-end, développement back-end">
+    <meta name="author" content="Magali Bernardin">
+    <meta name="description" content="Portfolio de Magali Bernardin, développeuse web et mobile spécialisée en React, Flutter et Node.js. Découvrez mes projets web et mobiles, allant de sites responsives à des applications mobiles performantes.">
+    
+    <link rel="icon" type="image/png"href="../images/image-fond2.png">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/contact.css">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Kapakana:wght@300..400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Kapakana:wght@300..400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="en-tete">
+  <nav class="menu-navigation conteneur">
+    <div class="logo">
+      <a href="../../index.html" aria-label="Accueil - Bernardin Magali">
+        <img src="../images/image-fond2.png" 
+             alt="C’est un logo circulaire stylisé représentant le profil d’une femme noire aux cheveux crépus ornés de lignes dorées, entouré d’anneaux colorés rouge, orange et vert." 
+             width="60" height="60">
+      </a>
+    </div>
+    <button class="bouton-menu" aria-label="Menu mobile" aria-expanded="false">
+      <span class="ligne-menu"></span>
+      <span class="ligne-menu"></span>
+      <span class="ligne-menu"></span>
+    </button>
+    <ul class="liens-navigation" id="menu">
+      <li><a href="../../index.html">Accueil</a></li>
+      <li><a href="../html/a-propos.html">À propos</a></li>
+      <li><a href="../html/projet.html">Projets</a></li>
+      <li><a href="../html/contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+  
+       <main>
+        <section class="contact-section flex">
+            <h2 class="contact-title" id="titre-contact">Entrons en contact</h2>
+            
+            <div class="contact-container">
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>Envoyez-moi un message directement</p>
+                    <a href="mailto:magali.bernardin.tech@gmail.com?subject=Demande%20d'information&body=Bonjour,%0A%0AJe%20souhaite%20en%20savoir%20plus%20sur%20vos%20services." class="contact-btn" target="_blank">Envoyer un email</a>
+
+                </div>
+                
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <i class="fas fa-comment-dots"></i>
+                    </div>
+                    <h3>Réseaux sociaux</h3>
+                    <p>Connectons-nous sur les plateformes sociales</p>
+                    <div class="contact-options">
+                        <a href="#" class="option-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <!-- <a href="#" class="option-btn"><i class="fab fa-twitter"></i> Twitter</a> -->
+                        <a href="#" class="option-btn"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+                
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Réunion</h3>
+                    <p>Planifions un appel vidéo pour discuter de votre projet</p>
+                    <a href="mailto:magali.bernardin.tech@gmail.com?subject=Planifions%20un%20appel%20vid%C3%A9o&body=Bonjour,%0A%0ANous%20pourrions%20planifier%20un%20appel%20vid%C3%A9o%20pour%20discuter%20de%20mon%20projet.%20Merci%20de%20me%20faire%20savoir%20vos%20disponibilit%C3%A9s.%0A%0ACordialement," class="contact-btn" target="_blank">
+Planifier un appel vidéo
+</a>
+
+                </div>
+            </div>
+            <div class="messenger-wrapper" style="position: relative;">
+                <button id="close-messenger" class="close-btn">✖ Fermer</button>
+                <div class="messenger-image">
+                    <img src="../images/bureaumag.png" alt="Espace de travail de Magali Bernardin">
+                </div> 
+              <div class="messenger-interface">
+                  <div class="message-bubble">
+                      <p>Bonjour ! Comment puis-je vous aider aujourd'hui ?</p>
+                  </div>
+                  
+                  <div class="typing-indicator">
+                      <div class="typing-dot"></div>
+                      <div class="typing-dot"></div>
+                      <div class="typing-dot"></div>
+                  </div>
+                  
+                  <div class="contact-options">
+                      <button class="option-btn" onclick="showMessage('Je souhaite discuter d\'un projet')">Discuter d'un projet</button>
+                      <button class="option-btn" onclick="showMessage('Je veux en savoir plus sur vos compétences')">Vos compétences</button>
+                      <button class="option-btn" onclick="showMessage('Comment pouvons-nous collaborer?')">Collaboration</button>
+                      <button class="option-btn" onclick="showMessage('Autre chose...')">Autre chose</button>
+                  </div>
+              </div>
+            </div>
+        </section>
+    </main>
+     <footer class="pied-de-page">
+        <div class="bas-pied">
+            <p>© 2025 Bernardin Magali • <a href="/privacy">Politique de confidentialité</a></p>
+        </div>
+    </footer>
+    <script src="../js/contact.js"></script>
+</body>
+</html>

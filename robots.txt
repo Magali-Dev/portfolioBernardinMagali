@@ -1,0 +1,31 @@
+# robots.txt pour www.exemple.com
+
+# Autoriser tous les robots à tout explorer (sauf ce qui est explicitement interdit)
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /cgi-bin/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /private/
+Disallow: /tmp/
+Allow: /
+
+# Sitemaps (à adapter avec ton nom de domaine)
+Sitemap: https://magali-bernardin-bichet-meteo-horoscope.sidathsoeun.fr
+
+# Règles spécifiques pour Googlebot
+User-agent: Googlebot
+Disallow: /no-google/
+
+# Règles spécifiques pour Bingbot
+User-agent: Bingbot
+Disallow: /no-bing/
+
+# Interdire complètement un robot malveillant (exemple)
+User-agent: EvilBot
+Disallow: /
+
+# Délais de crawl pour éviter la surcharge du serveur (certains bots respectent Crawl-delay)
+User-agent: *
+Crawl-delay: 10

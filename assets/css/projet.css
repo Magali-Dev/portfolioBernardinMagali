@@ -1,0 +1,159 @@
+/* ============================= */
+/* RESET ET BASE */
+/* ============================= */
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: var(--police-texte);
+  background: var(--fond);
+  color: var(--couleur-texte);
+  line-height: 1.6;
+}
+h1, h3 {
+  font-family: var(--police-titre);
+  color: var(--couleur-primaire);
+  margin-bottom: 1rem;
+}
+p { color: var(--couleur-texte-secondaire); }
+a { color: inherit; text-decoration: none; transition: var(--transition); }
+ul { list-style: none; padding: 0; margin: 0; }
+img { max-width: 100%; display: block; }
+
+/* ============================= */
+/* CONTENEUR GLOBAL */
+.conteneur {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 0;
+}
+/* PROJETS */
+
+h2 {
+  font-family: var(--police-titre);
+  background: linear-gradient(
+    135deg, 
+    var(--couleur-primaire) 0%, 
+    var(--couleur-accent) 50%, 
+    var(--couleur-accent-secondaire) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: clamp(4rem, 5vw, 10rem);
+  margin-bottom: 2rem;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 5rem;
+}
+
+
+.projets {
+  position: relative;
+  padding: 4rem 1rem;
+  
+}
+
+.grille-projets {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-bottom: 3rem;
+}
+
+.carte-projet {
+  background: var(--fond-secondaire);
+  border-radius: var(--arrondi);
+  overflow: hidden;
+  box-shadow: var(--ombre);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(47, 129, 247, 0.1);
+  backdrop-filter: blur(10px);
+  width: 320px;
+  border-radius: 12px;
+  overflow: hidden;
+  
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+.carte-projet:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--ombre-survol);
+  border-color: var(--couleur-primaire);
+}
+
+.carte-projet img {
+  width: 70%;
+  height: auto;
+  max-height: 250px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+
+.carte-projet:hover img { transform: scale(1.02); }
+
+.contenu-projet {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.contenu-projet h3 {
+  margin-bottom: 0.8rem;
+  color: var(--couleur-primaire);
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+.contenu-projet p {
+  margin-bottom: 1.5rem;
+  color: var(--couleur-texte-secondaire);
+  flex-grow: 1;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.bouton-projet {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--arrondi);
+  background: var(--degrade-primaire);
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  transition: var(--transition);
+}
+.bouton-projet:hover { transform: translateY(-2px); }
+.pied-de-page p{
+  text-align: center;
+  
+}
+/* ============================= */
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .grille-projets { grid-template-columns: 1fr; }
+  .carte-projet img { height: 220px; }
+}
+/* État initial caché et décalé */
+.titre-anim {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Classe visible qui déclenche l’animation */
+.titre-anim.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animation optionnelle au survol */
+.titre-anim:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
