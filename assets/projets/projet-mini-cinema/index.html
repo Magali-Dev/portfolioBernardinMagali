@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Cinéma Fictif – Application cinéma | Magali Bernardin</title>
+    <meta name="google-site-verification" content="PAFIOhewShvDwN3A8ah6JkjODbtGbzR5h-dXm2qUOrY"/>
+    <link rel="stylesheet" href="./ASSETS/css/index.css">
+    <meta name="description" content="application cinéma Mini Cinéma Fictif realisé par Magali Bernardin dans le cadre de sa formation developpeur web et web mobile">
+    <meta name="keywords" content="Magali Bernardin, Projet cinema, cinema fictif, formation developpeur">
+    <meta name="author" content="Magali Bernardin">
+    <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large" />
+    <link rel="shortcut icon" href="./ASSETS/images/cinema.png"type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <div class="logo flex">
+                <img src="./ASSETS/images/logo-cinema.png" alt="logo mini cinéma fictif environnement gobelet coca, popcorn et un clape de cinéma"/>
+            </div>
+           <button id="burger" aria-label="Ouvrir/fermer le menu">☰</button>
+           <div class="menu-container" id="menuContainer">
+                <ul class="navbar flex" id="menu">
+                    <li><a href="./ASSETS/html/inscription.html">Inscription</a></li>
+                    <li><a href="./ASSETS/html/connexion.html">Connexion</a></li>
+                    <li><a href="#" id="deconnexion">Déconnexion</a></li>
+                    <li><a href="./ASSETS/html/espace-membre.html">Popcorn Club</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1 class="neon-title neon">Bienvenue sur MagiBox</h1>
+        <h3>Le cinéma… enfin presque !<br>Réservez des places virtuelles pour des films imaginaires,
+            et profitez d’une expérience totalement pas garantie.</h3>
+        <div class="fond-violet flex">
+<!-- fiche diplodocus -->
+            <section class="descriptif-affiche flex">
+                <img src="./ASSETS/images/Diplodocus.jpg" alt="Diplodocus est une aventure animée où deux enfants partent à la recherche de leur dinosaure préféré dans un monde fantastique">
+                <div class="description-coeur gap flex">
+                        <button class="ouvrir-fiche informationMembre" data-fiche="fiche-diplodocus">
+                        <img src="./ASSETS/images/coeur-blanc.png" alt="un coeur avec un + cliquable pour plus d'information">
+                        </button>
+                    <span>Diplodocus</span>
+                </div>
+            </section>
+
+            <section class="fiche-details hidden" id="fiche-diplodocus">
+                <div class="image-fond diplodocus"></div>
+                <button class="fermer-fiche fermer-btn">×</button>
+                <div class="petit-image">
+                    <img src="./ASSETS/images/Diplodocus.jpg" alt="Petite image Diplodocus est une aventure animée où deux enfants partent à la recherche de leur dinosaure préféré dans un monde fantastique" />
+                </div>
+                <div class="contenu">
+                        <h2>Diplodocus</h2>
+                        <span>1h 33min</span>
+                        <span class="modifier-descriptif">Genre : </span><span>Animation, Famille, Aventure</span>
+                        <br>
+                        <span class="modifier-descriptif">Titre original : </span><span>Smok Diplodok</span>
+                        <br>
+                        <span class="modifier-descriptif">Date de sortie : </span><span>28/05/2025</span>
+                        <br>
+                        <span class="modifier-descriptif">Réalisé par : </span><span>Wojtek Wawszczyk</span>
+                        <br>
+                        <span class="modifier-descriptif">Avec : </span><span>Julian Wanderer, Tadeusz Baranowski, Rachel Butera</span>
+                        <br><br>
+                        <span class="modifier-descriptif">Résumé</span>
+                        <p>Le petit dinosaure Diplodocus rêve de vivre une grande aventure.
+                        Malheureusement, ses parents surprotecteurs ne le laissent pas explorer le monde magnifique mais dangereux au-delà du mur qu'ils ont construit pour protéger leur foyer dans la jungle.
+                        Diplo ne sait pas encore que son univers fait en réalité partie d'une bande dessinée créée par Ted,
+                        un artiste rêvant de succès.
+                        </p>
+                    <div class="prix">12 €</div>
+                    <div class="quantite">
+                        <button class="moins">-</button>
+                        <span class="count">0</span>
+                        <button class="plus">+</button>
+                    </div>
+                    <button class="reserve-btn">Réserver</button>
+                    <div class="places-restantes">Places restantes : 50</div>
+                </div>
+            </section>
+<!-- fiche the Amateur -->
+            <section class="descriptif-affiche flex">
+                <img src="./ASSETS/images/The-Amateur.webp" alt="L'affiche du film The Amateur (2025), un thriller d'espionnage réalisé par James Hawes, met en avant une esthétique sobre et intrigante, fidèle à l'atmosphère tendue du film.">
+                <div class="description-coeur gap flex">
+                        <button class="ouvrir-fiche informationMembre" data-fiche="fiche-the-amateur">
+                        <img src="./ASSETS/images/coeur-blanc.png" alt="un coeur avec un + cliquable pour plus d'information">
+                        </button>
+                    <span>The Amateur</span>
+                </div>
+            </section>
+
+            <section class="fiche-details hidden" id="fiche-the-amateur">
+                <div class="image-fond the-amateur"></div>
+                <button class="fermer-fiche fermer-btn">×</button>
+                <div class="petit-image">
+                    <img src="./ASSETS/images/The-Amateur.webp" alt="L'affiche du film The Amateur (2025), un thriller d'espionnage réalisé par James Hawes, met en avant une esthétique sobre et intrigante, fidèle à l'atmosphère tendue du film." />
+                </div>
+                <div class="contenu">
+                    <h2>The Amateur</h2>
+                    <span>2h 3min</span> 
+                    <span class="modifier-descriptif">Genre :</span><span>Thriller, Drame</span> 
+                    <br>
+                    <span class="modifier-descriptif">Date de sortie :</span><span>09/04/2025 </span>
+                    <br>
+                    <span class="modifier-descriptif">Réalisé par :</span><span>james Hawes</span> 
+                    <br>
+                    <span class="modifier-descriptif">Avec :</span><span> Rami Malek, Laurence Fishburne, Rachel Brosnahan</span>
+                    <br>
+                    <span class="modifier-descriptif">Résumé</span>
+                    <p> Charlie Heller, un cryptographe de la CIA aussi brillant qu’introverti, voit son existence basculer lorsque sa femme décède durant une attaque terroriste perpétrée à Londres. Déplorant l’inaction de sa hiérarchie, il prend alors l’affaire en mains et se met à la recherche des assassins,
+                        embarquant pour un dangereux voyage partout à travers le monde pour assouvir sa vengeance.</p>
+                    
+                    <div class="prix">12 €</div>
+                    <div class="quantite">
+                        <button class="moins">-</button>
+                        <span class="count">0</span>
+                        <button class="plus">+</button>
+                    </div>
+                    <button class="reserve-btn">Réserver</button>
+                    <div class="places-restantes">Places restantes : 50</div>
+                </div>
+            </section>
+<!-- fiche chime -->
+            <section class="descriptif-affiche flex">
+                <img src="./ASSETS/images/Chime.jpg" alt="Chime explore la tension entre un professeur et un élève hanté par un mystérieux carillon.">
+                <div class="description-coeur gap flex">
+                        <button class="ouvrir-fiche informationMembre" data-fiche="fiche-chime">
+                        <img src="./ASSETS/images/coeur-blanc.png" alt="un coeur avec un + cliquable pour plus d'information">
+                        </button>
+                    <span>Chime</span>
+                </div>
+            </section>
+
+            <section class="fiche-details hidden" id="fiche-chime">
+                <div class="image-fond chime"></div>
+                <button class="fermer-fiche fermer-btn">×</button>
+                <div class="petit-image">
+                    <img src="./ASSETS/images/Chime.jpg" alt="Chime explore la tension entre un professeur et un élève hanté par un mystérieux carillon." />
+                </div>
+                <div class="contenu">
+                    <h2>Chime</h2>
+                    <span>2h 3min</span>
+                    <span class="modifier-descriptif">Genre :</span><span>Thriller, Drame</span>
+                    <br>
+                    <span class="modifier-descriptif">Date de sortie :</span><span>28/05/2025</span>
+                    <br>
+                    <span class="modifier-descriptif">Réalisé par :</span><span>James Hawes</span>
+                    <br>
+                    <span class="modifier-descriptif">Avec :</span><span>Rami Malek, Laurence Fishburne, Rachel Brosnahan</span>
+                    <br>
+                    <span class="modifier-descriptif">Résumé</span>
+                    <p> Charlie Heller, un cryptographe de la CIA aussi brillant qu’introverti, 
+                        voit son existence basculer lorsque sa femme décède durant une attaque terroriste perpétrée à Londres.
+                        Déplorant l’inaction de sa hiérarchie, il prend alors l’affaire en mains et se met à la recherche des assassins, 
+                        embarquant pour un dangereux voyage partout à travers le monde pour assouvir sa vengeance.
+                    </p>
+                   <div class="prix">12 €</div>
+                    <div class="quantite">
+                        <button class="moins">-</button>
+                        <span class="count">0</span>
+                        <button class="plus">+</button>
+                    </div>
+                    <button class="reserve-btn">Réserver</button>
+                    <div class="places-restantes" >Places restantes : 50</div>
+                </div>
+            </section>
+
+            
+
+<!-- fiche Destination Finale -->
+            <section class="descriptif-affiche flex">
+                <img src="./ASSETS/images/Destination-Finale.jpg" alt="Destination Finale: Bloodlines suit une jeune femme confrontée à une malédiction mortelle liée au passé de sa famille.">
+                <div class="description-coeur gap flex">
+                        <button class="ouvrir-fiche informationMembre" data-fiche="fiche-destination-finale">
+                        <img src="./ASSETS/images/coeur-blanc.png" alt="un coeur avec un + cliquable pour plus d'information">
+                        </button>
+                    <span>Destination Finale</span>
+                </div>
+            </section>
+
+            <section class="fiche-details hidden" id="fiche-destination-finale">
+                <div class="image-fond destination-Finale "></div>
+                <button class="fermer-fiche fermer-btn">×</button>
+                <div class="petit-image">
+                    <img src="./ASSETS/images/Destination-Finale.jpg" alt="Destination Finale: Bloodlines suit une jeune femme confrontée à une malédiction mortelle liée au passé de sa famille." />
+                </div>
+                <div class="contenu">
+                    <h2>Destination Finale <br><span style="color: red">"Bloodlines"</span></h2>
+                    
+                    <span>1h 50min</span>
+                    <span class="modifier-descriptif">Genre :</span><span>Épouvante-horreur, Thriller</span><br>
+                    <p style="color: red;">Le caractère sanglant de certaines mises à mort sont susceptibles de heurter un public sensible non averti.</p>
+                    <br>
+                    <span class="modifier-descriptif">Date de sortie :</span><span>14/05/2025</span>
+                    <br>
+                    <span class="modifier-descriptif">Réalisé par :</span><span>Zach Lipovsky, Adam B. Stein</span>
+                    <br>
+                    <span class="modifier-descriptif">Avec :</span><span>Brec Bassinger, Teo Briones, Kaitlyn Santa Juana</span>
+                    <br>
+                    <span class="modifier-descriptif">Résumé</span>
+                    <br>
+                    <p>Hantée par un cauchemar terrifiant qui revient sans cesse, Stefanie, étudiante à l’université, rentre chez elle pour retrouver la trace de la seule personne susceptible d’enrayer ce cycle infernal et de sauver ses proches du sort funeste qui les attend…</p>
+                    <div class="prix">12 €</div>
+
+                    <div class="quantite">
+                        <button class="moins">-</button>
+                        <span class="count">0</span>
+                        <button class="plus">+</button>
+                    </div>
+                    <button class="reserve-btn">Réserver</button>
+                    <div class="places-restantes">Places restantes : 50</div>
+                </div>
+            </section>
+<!-- fiche Thunderbolts* -->
+             <section class="descriptif-affiche flex">
+                <img src="./ASSETS/images/Thunderbolts.jpg" alt="Dans Thunderbolts, un groupe d'anti-héros désabusés est manipulé par la CIA pour une mission risquée, les confrontant à leurs démons intérieurs.">
+                <div class="description-coeur gap flex">
+                        <button class="ouvrir-fiche informationMembre" data-fiche="fiche-thunderbolts*">
+                        <img src="./ASSETS/images/coeur-blanc.png" alt="un coeur avec un + cliquable pour plus d'information">
+                        </button>
+                    <span>Thunderbolts*</span>
+                </div>
+            </section>
+
+            <section class="fiche-details hidden" id="fiche-thunderbolts*">
+                <div class="image-fond thunderbolts"></div>
+                <button class="fermer-fiche fermer-btn">×</button>
+                <div class="petit-image">
+                    <img src="./ASSETS/images/Thunderbolts.jpg" alt="Dans Thunderbolts, un groupe d'anti-héros désabusés est manipulé par la CIA pour une mission risquée, les confrontant à leurs démons intérieurs." />
+                </div>
+                <div class="contenu">
+                    <h2>Thunderbolts*</h2>
+                    
+                    <span>2h 6min</span>
+                    <span class="modifier-descriptif">Genre :</span><span>Action, Fantastique</span><br>
+                    <br>
+                    <span class="modifier-descriptif">Date de sortie :</span><span>30/04/2025</span>
+                    <br>
+                    <span class="modifier-descriptif">Réalisé par :</span><span>Jake Schreier</span>
+                    <br>
+                    <span class="modifier-descriptif">Avec :</span><span>Florence Pugh, Sebastian Stan, David Harbour</span>
+                    <br>
+                    <span class="modifier-descriptif">Résumé</span>
+                    <br>
+                    <p>Marvel Studios rassemble une équipe de anti-héros peu conventionnelle : Yelena Belova, Bucky Barnes, Red Guardian, Le Fantôme, Taskmaster et John Walker. Tombés dans un piège redoutable tendu par Valentina Allegra de Fontaine, ces laissés pour compte complètement désabusés doivent participer à une mission à haut risque qui les forcera à se confronter aux recoins les plus sombres de leur passé. 
+                    Ce groupe dysfonctionnel se déchirera-t-il ou trouvera-t-il sa rédemption en s’unissant avant qu’il ne soit trop tard ?</p>
+                    <div class="prix">12 €</div>
+                    <div class="quantite">
+                        <button class="moins">-</button>
+                        <span class="count">0</span>
+                        <button class="plus">+</button>
+                    </div>
+                    <button class="reserve-btn">Réserver</button>
+                    <div class="places-restantes">Places restantes : 50</div>
+                </div>
+            </section>
+<!-- fiche les maudites -->
+            <section class="descriptif-affiche flex">
+                <img src="./ASSETS/images/Les-Maudites.webp" alt="L'affiche du film Les Maudites (titre original : El llanto) réalisé par Pedro Martín-Calero, sorti en France le 7 mai 2025, plonge immédiatement le spectateur dans une atmosphère oppressante et mystérieuse">
+                <div class="description-coeur gap flex">
+                        <button class="ouvrir-fiche informationMembre" data-fiche="fiche-maudites">
+                        <img src="./ASSETS/images/coeur-blanc.png" alt="un coeur avec un + cliquable pour plus d'information">
+                        </button>
+                    <span>Thunderbolts*</span>
+                </div>
+            </section>
+
+            <section class="fiche-details hidden" id="fiche-maudites">
+                <div class="image-fond maudites"></div>
+                <button class="fermer-fiche fermer-btn">×</button>
+                <div class="petit-image">
+                    <img src="./ASSETS/images/Les-Maudites.webp" alt="L'affiche du film Les Maudites (titre original : El llanto) réalisé par Pedro Martín-Calero, sorti en France le 7 mai 2025, plonge immédiatement le spectateur dans une atmosphère oppressante et mystérieuse" />
+                </div>
+                <div class="contenu">
+                    <h2>Les Maudites</h2>
+                    
+                    <span>1h 47min</span>
+                    <span class="modifier-descriptif">Genre :</span><span>Thriller, Épouvante-horreur</span><br>
+                    <br>
+                    <span class="modifier-descriptif">Date de sortie :</span><span>21/05/2025</span>
+                    <br>
+                    <span class="modifier-descriptif">Réalisé par :</span><span>Pedro Martín-Calero</span>
+                    <br>
+                    <span class="modifier-descriptif">Avec :</span><span>Ester Expósito, Mathilde Ollivier, Malena Villa</span>
+                    <br>
+                    <span class="modifier-descriptif">Résumé</span>
+                    <br>
+                    <p>Quelque chose hante Andrea, mais personne, pas même elle, ne peut le voir à l’œil nu. Il y a vingt ans, à dix mille kilomètres de là, la même présence terrorisait Marie. Camila est la seule à pouvoir comprendre ce qui leur arrive, mais personne ne la croit. Face à cette menace oppressante, toutes trois entendent le même son écrasant : un cri.</p>
+                    <div class="prix">12 €</div>
+                    <div class="quantite">
+                        <button class="moins">-</button>
+                        <span class="count">0</span>
+                        <button class="plus">+</button>
+                    </div>
+                    <button class="reserve-btn">Réserver</button>
+                    <div class="places-restantes">Places restantes : 50</div>
+                </div>
+            </section>
+
+<!-- fiche l'ultime braquage -->
+            <section class="descriptif-affiche flex">
+                <img src="./ASSETS/images/L'Ultime-braquage.jpg" alt="Une équipe de braqueurs chevronnés prépare méticuleusement un gros coup. Un braquage rapide, brutal, sans bavure et sans trace. Mais une erreur va tout changer. Il faut tout abandonner, disparaître. Maintenant.">
+                <div class="description-coeur gap flex">
+                        <button class="ouvrir-fiche informationMembre" data-fiche="fiche-braquage">
+                        <img src="./ASSETS/images/coeur-blanc.png" alt="un coeur avec un + cliquable pour plus d'information">
+                        </button>
+                    <span>L'Ultime braquage</span>
+                </div>
+            </section>
+
+            <section class="fiche-details hidden" id="fiche-braquage">
+                <div class="image-fond braquage"></div>
+                <button class="fermer-fiche fermer-btn">×</button>
+                <div class="petit-image">
+                    <img src="./ASSETS/images/L'Ultime-braquage.jpg" alt="Petite image du film" />
+                </div>
+                <div class="contenu">
+                    <h2>L'ultime Braquage</h2>
+                    
+                    <span>1h 50min</span>
+                    <span class="modifier-descriptif">Genre :</span><span>Action, Thriller</span><br>
+                    <p style="color: red;">Quelques scènes d'exécution de sang-froid et de maltraitance sont susceptibles de troubler un public sensible.</p>
+                    <br>
+                    <span class="modifier-descriptif">Date de sortie :</span><span>28/05/2025</span>
+                    <br>
+                    <span class="modifier-descriptif">Réalisé par :</span><span>Frederik Louis Hviid</span>
+                    <br>
+                    <span class="modifier-descriptif">Avec :</span><span>Gustav Dyekjaer Giese, Reda Kateb, Amanda Collin</span>
+                    <br>
+                    <span class="modifier-descriptif">Résumé</span>
+                    <br>
+                    <p>Une équipe de braqueurs chevronnés prépare méticuleusement un gros coup. Un braquage rapide, brutal, sans bavure et sans trace. Mais une erreur va tout changer. Il faut tout abandonner, disparaître. Maintenant.</p>
+                    <div class="prix">12 €</div>
+                    <div class="quantite">
+                        <button class="moins">-</button>
+                        <span class="count">0</span>
+                        <button class="plus">+</button>
+                    </div>
+                    <button class="reserve-btn">Réserver</button>
+                    <div class="places-restantes">Places restantes : 50</div>
+                </div>
+            </section>
+
+<!-- fiche doux Jésus -->
+            <section class="descriptif-affiche flex">
+                <img src="./ASSETS/images/Doux Jésus.webp" alt="L'affiche du film Doux Jésus (2025), réalisé par Frédéric Quiring, présente une esthétique visuelle à la fois ludique et intrigante, en parfaite adéquation avec le ton de cette comédie française.">
+                <div class="description-coeur gap flex">
+                        <button class="ouvrir-fiche informationMembre" data-fiche="fiche-braquage">
+                        <img src="./ASSETS/images/coeur-blanc.png" alt="un coeur avec un + cliquable pour plus d'information">
+                        </button>
+                    <span>Doux Jésus</span>
+            </div>
+            </section>
+            <div class="fiche-details hidden" id="fiche-doux-jesus">
+                <div class="image-fond jesus"></div>
+                <button class="fermer-fiche fermer-btn">×</button>
+                <div class="petit-image">
+                    <img src="./ASSETS/images/Doux Jésus.webp" alt="L'affiche du film Doux Jésus (2025), réalisé par Frédéric Quiring, présente une esthétique visuelle à la fois ludique et intrigante, en parfaite adéquation avec le ton de cette comédie française." />
+                </div>
+                <div class="contenu">
+                    <h2>Doux Jésus</h2>
+                    
+                    <span>1h 26min</span>
+                    <span class="modifier-descriptif">Genre :</span><span>comédie</span><br>
+                    <br>
+                    <span class="modifier-descriptif">Date de sortie :</span><span>09/04/2025</span>
+                    <br>
+                    <span class="modifier-descriptif">Réalisé par :</span><span>Frédéric Quiring</span>
+                    <br>
+                    <span class="modifier-descriptif">Avec :</span><span>Marilou Berry, Isabelle Nanty, Barbara Bolotner</span>
+                    <br>
+                    <span class="modifier-descriptif">Résumé</span>
+                    <br>
+                    <p>Sœur Lucie, religieuse dévouée, décide de fuir son couvent au bout de 20 ans pour retrouver son amour de jeunesse. C'est pour elle le début d'une aventure extraordinaire qui mettra sa foi à l'épreuve et la confrontera au monde d’aujourd’hui plein de surprises et de tentations.</p>
+                    <div class="prix">12 €</div>
+                    <div class="quantite">
+                        <button class="moins">-</button>
+                        <span class="count">0</span>
+                        <button class="plus">+</button>
+                    </div>
+                    <button class="reserve-btn">Réserver</button>
+                    <div class="places-restantes">Places restantes : 50</div>
+                </div>
+            </div>
+        </div>
+            <div class="fond-triangle-violet"></div>
+    </main>
+    <footer class="footer flex">
+        <span class="copyright">&copy/Conception et réalisation par Magali Bernardin</span>
+        <nav>
+            <ul class="navbar-footer gap ">
+                <li><a href="./ASSETS/html/a-propos-gerante.html">À propos de la Gérante</a></li>
+                <li><a href="./ASSETS/html/condition-legales.html">Conditions légales , CGU & Politique de confidentialité</a></li>
+            </ul>
+        </nav>
+    </footer>
+        <script src="./ASSETS/js/index.js"></script>
+</body>
+</html>

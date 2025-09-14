@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://magali-bernardin-bichet-mini-cgr-fictif@sidathsoeun.fr/ASSETS/html/admin.html" />
+    <link rel="shortcut icon" href="../../ASSETS/images/cinema.png"type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/admin.css">
+    <title>admin</title>
+</head>
+<body>
+    <header>
+        <nav class="nav flex">
+            <div class="logo flex">
+                <img src="../images/logo-cinema.png" alt="logo mini cinéma fictif environnement gobelet coca, popcorn et un clape de cinéma"/>
+            </div>
+            <ul class="navbar gap flex">
+                <li><a href="../../index.html">Accueil</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="prix flex">
+            <section class="card" id="changerPrix">
+                <h1>Modifier le prix unitaire</h1>
+                <label for="inputPrix">Prix unitaire (en€) :</label>
+                <input id="inputPrix" type="number" step="0.01" min="0" placeholder="Entrez le prix">
+                <button id="btnSavePrix">Enregistrer</button>
+            </section>
+            
+            <section class="card" id="chiffreAffaires">
+                <h2>Chiffre d'affaires</h2>
+                <p>Total des ventes : <span id="totalCA">0.00</span></p>
+                <div id="detailsAchats"></div>
+            </section>
+        </div>
+    </main>
+
+    <script src="../js/admin.js"></script>
+</body>

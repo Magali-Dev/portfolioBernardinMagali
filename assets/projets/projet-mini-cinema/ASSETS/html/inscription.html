@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://magali-bernardin-bichet-mini-cgr-fictif@sidathsoeun.fr/ASSETS/html/inscription.html" />
+    <link rel="shortcut icon" href="../../ASSETS/images/cinema.png"type="image/x-icon">
+    <link rel="stylesheet" href="../css/inscription.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Londrina+Shadow&display=swap" rel="stylesheet">
+    <title>Inscription</title>
+</head>
+<body>
+    <header>
+        <nav class="nav flex">
+            <div class="logo flex">
+                <img src="../images/logo-cinema.png" alt="logo mini cinéma fictif environnement gobelet coca, popcorn et un clape de cinéma"/>
+            </div>
+            <ul class="navbar gap flex">
+                <li><a href="../../index.html">Accueil</a></li>
+                <li><a href="../../ASSETS/html/connexion.html">connexion</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-inscription">*
+        <div class="titre-image-inscription flex">
+            <div class="titre-inscription">
+                <h1>Je m'inscrire</h1>
+                <p>Complétez le formulaire pour vous inscrire</p>
+            </div>
+            <div class="image_garantie">
+                <img src="../../ASSETS/images/100-garantie.webp" alt="image avec une étoile et 100% garantie">
+            </div>
+        </div>
+        <div class="inscription flex">
+            <form class="formulaire-inscritpion flex">
+                <label for="name">Nom* </label>
+                <input type="text" id="name" class="form" required>
+                <br>
+                <label for="name">Prénom </label>
+                <input type="text" id="name-prenom" class="form">
+                <br>
+                <label for="email">E-mail* </label>
+                <input type="email" id="email" name="email"class="form" required>
+                <br>
+                <label for="password">Créer un mot de passe* </label>
+                <input type="password" id="password" name="password" class="form" required>
+                <br>
+                <!-- <p>Le mot de passe doit être composé de 8 caractères non accentués minimum, dont un chiffre, une majuscule, 
+                une minuscule et un caractère spécial parmi ceux-ci : !"#$%&'()*+,-./:;<=>?@[]^_`{|}~</p>
+                <label for="start">Date de naissance:</label>
+                <input type="date" id="start" name="trip-start" value="1930-07-22" min="2018-01-01" max="2025-12-31" class="form"/>
+                <p>Renseignez votre date de naissance et bénéficiez d'une place offerte valable le jour de votre anniversaire.</p>
+                <p class="Conditions">En cliquant sur Valider, j'accepte les Conditions générales d'utilisation du Club CGR
+                <p>* champs obligatoires</p> -->
+                <br>
+                <button type="button" id="valider-inscription" class="Valider-inscription">Valider</button>
+
+            </form>
+         </div>
+        
+
+    </main>
+    <script src="../js/inscription.js"></script>
+</body>
+</html>

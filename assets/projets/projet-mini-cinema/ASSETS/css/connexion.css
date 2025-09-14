@@ -1,0 +1,125 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color:#101010;
+}
+.nav {
+   display: flex; 
+   justify-content: space-between; 
+   align-items: center; 
+   flex-wrap: wrap;
+   padding: 0 1rem; 
+  }
+.nav .logo img { 
+  height: 250px; 
+}
+
+
+#burgerConnexion { 
+  display: none; 
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer; }
+.menu-container { 
+  display: block;
+ }
+.navbar {
+  gap: 1rem;
+  list-style: none;
+ }
+.navbar a { 
+  color: white; 
+  padding: 10px; 
+  text-decoration: none; 
+  display: block;
+  font-size: 30px;
+ }
+ .navbar a:hover { 
+  color: rgb(183, 15, 15); 
+  padding: 10px; 
+  text-decoration: none; 
+  display: block;
+  font-size: 30px;
+ }
+
+/* === Mobile === */
+@media (max-width: 850px) {
+  #burgerConnexion { 
+    display: block;
+   }
+  .menu-container { 
+    display: none; 
+    width: 100%; 
+    background-color: #6c175f; }
+  .menu-container.show { 
+    display: block; 
+  }
+  .navbar {
+     flex-direction: column;
+     margin: 0;
+     padding: 0; }
+  .navbar a { 
+    text-align: center; 
+    padding: 12px; 
+    border-top: 1px solid #444;
+   }
+   .navbar a:hover { 
+    text-align: center; 
+    color: #100f0f;
+    padding: 12px; 
+    border-top: 1px solid #444;
+   }
+}
+.titre-connexion{
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.titre-connexion h1{
+    margin-top: 100px;
+    color: white;
+    font-size: 35px;
+    font-family: "Inknut Antiqua", serif;
+  }
+.titre-connexion p{
+    color: white;
+    font-size: 20px;
+}
+.titre-connexion img{
+    width: 350px;
+    height: auto;
+
+}
+.connexion{
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+    
+}
+.formulaire-connexion {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.form{
+    width: 50%;
+    padding: 8px;
+    box-shadow: 5px 5px 2px rgb(63, 60, 60);
+}
+.Valider-connexion{
+    width: 20%;
+    color: rgb(11, 11, 11);
+    background-color: grey;
+    padding: 10px;
+    border-radius: 20px;
+}
+.flex{
+    display: flex;
+}
+
+.gap{
+ gap: 10px ;   
+}

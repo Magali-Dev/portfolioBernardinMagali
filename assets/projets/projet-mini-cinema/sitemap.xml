@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Page d'accueil -->
+  <url>
+    <loc>https://magali-bernardin-bichet-mini-cgr-fictif@sidathsoeun.fr/index.html/</loc>
+    <lastmod>2025-06-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Pages principales -->
+  <url>
+    <loc>https://magali-bernardin-bichet-mini-cgr-fictif@sidathsoeun.fr/ASSETS/html/a-propos-gerante.html</loc>
+    <lastmod>2025-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://magali-bernardin-bichet-mini-cgr-fictif@sidathsoeun.fr/ASSETS/html/admin.html</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+
+  <url>
+    <loc>https://magali-bernardin-bichet-mini-cgr-fictif@sidathsoeun.fr/ASSETS/html/condition-legales.html</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Articles de blog -->
+  <url>
+    <loc>https://magali-bernardin-bichet-mini-cgr-fictif@sidathsoeun.fr/ASSETS/html/connexion.html</loc>
+    <lastmod>2025-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://magali-bernardin-bichet-mini-cgr-fictif@sidathsoeun.fr/ASSETS/html/espace-membre.html</loc>
+    <lastmod>2025-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+
+    <url>
+    <loc>https://magali-bernardin-bichet-mini-cgr-fictif@sidathsoeun.fr/ASSETS/html/inscription.html</loc>
+    <lastmod>2025-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>

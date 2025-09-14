@@ -1,0 +1,382 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color:#101010;
+}
+.nav {
+   display: flex; 
+   justify-content: space-between; 
+   align-items: center; 
+   flex-wrap: wrap;
+   padding: 0 1rem; 
+  }
+.nav .logo img { 
+  height: 250px; 
+}
+#burger { 
+  display: none; 
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer; 
+}
+.menu-container { 
+  display: block;
+ }
+.navbar {
+  gap: 1rem;
+  list-style: none;
+ }
+.navbar a { 
+  color: white; 
+  padding: 10px; 
+  text-decoration: none; 
+  display: block;
+  font-size: 30px;
+ }
+ .navbar a:hover { 
+  color: rgb(183, 15, 15); 
+  padding: 10px; 
+  text-decoration: none; 
+  display: block;
+  font-size: 30px;
+ }
+h1{
+  font-family: "Londrina Shadow";
+  text-align: center;
+  margin-top: 100px;
+  letter-spacing: 10px;
+  font-size: 45px;
+ 
+}
+h3{
+  color: #f0c9a6;
+  font-family: "Inknut Antiqua", serif;
+  font-size: 20px;
+  padding: 50px;
+  width: 100%;
+  text-align: center;
+
+}
+
+/* partie titre */
+.neon-title{
+  color: white;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: zoomFade 1.5s ease-out forwards;
+}
+
+@keyframes zoomFade {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.neon{
+  font-size: 5rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff0057, #7303c0, #00f0ff);
+  background-size: 300% 300%;
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 5s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.neon-title {
+  color: white;
+  opacity: 0;
+  transform: scale(0.8);
+  animation:
+    zoomFade 1.5s ease-out forwards,
+    gradientShift 5s ease infinite;
+}
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.fiche-details {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width:60%;
+  height: auto;
+  background-color: white;
+  color: black;
+  border: 2px solid #aaa;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  text-align:center;
+}
+.petit-image img{
+  position: absolute;
+  top: 18%;
+  right: 20%;
+  border-radius: 80%;
+  border: 2px solid white;
+  width: 100px;
+  height: 140px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.image-fond {
+  background-image: url('../../ASSETS/images/diplodocus-descriptifs.webp');
+  width:100%;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+.diplodocus{
+  background-image: url('../../ASSETS/images/diplodocus-descriptifs.webp');
+
+}
+.the-amateur{
+  background-image: url('../../ASSETS/images/descriptif-the-amateur.webp');
+
+}
+.chime{
+  background-image: url('../../ASSETS/images/Chime.jpg');
+}
+.destination-Finale{
+  background-image: url('../../ASSETS/images/descriptif-destination-finale.webp');
+
+}
+.thunderbolts{
+  background-image: url('../../ASSETS/images/des-thun.jpg');
+
+}
+.maudites{
+  background-image: url('../../ASSETS/images/descriptif-les-maudites.webp');
+  
+}
+.braquage{
+  background-image: url('../../ASSETS/images/descritptif-ultime-braquage.webp');
+  
+}
+.jesus{ background-image: url('../../ASSETS/images/descriptif-doux-jesus.jpg');}
+
+.contenu {
+ margin-top: 50px; 
+ justify-content: center;
+ text-align: center;
+ margin-top: 80px;
+ font-size: 18px;
+}
+h2 {
+  color: #e06c07; 
+  font-family: "Inknut Antiqua", serif;
+  font-size: 25px;
+}
+p {
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-align: center;
+  padding: 10px;
+}
+.modifier-descriptif{
+  color: #934c83;
+  font-size: 18px;
+}
+.prix {
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.quantite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.quantite button {
+  font-size: 18px;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  color: #100f0f;
+  transition: background-color 0.3s;
+  
+}
+.quantite button:hover {
+  background-color: rgb(174, 14, 123);
+}
+.reserve-btn {
+  width: 50%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #ff7f50;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  
+}
+.reserve-btn:hover {
+  background-color: #473fe0;
+}
+.places-restantes {
+  margin-top: 10px;
+  font-size: 20px;
+  text-align: center;
+  color: rgb(186, 34, 183);
+  
+}
+.fermer-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #934c83;
+  color: white;
+  border: none;
+  font-size: 20px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.fermer-btn:hover {
+  background-color: #d71ab4;
+}
+.hidden {
+  display: none;
+}
+
+.fond-violet{
+    width: 100%;
+    height: auto;
+    background-color: #50204E;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+}
+.descriptif-affiche img{
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    margin: 10px;
+}
+.descriptif-affiche{
+    flex-direction: column;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+}
+.description-coeur img{
+    width: 30px;
+    height: 30px;
+    margin: 0;
+}
+.description-coeur button{
+    background-color: #50204E;
+    cursor: pointer;
+}
+.description-coeur{
+    justify-content: center;
+}
+.fond-triangle-violet{
+  width: 100%; 
+  height: 200px;
+  background-color: #50204E;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 20%, 50% 100%, 0 20%);
+}
+.footer{
+    justify-content:space-between;
+    
+}
+.copyright{
+    color: white;
+    font-size: 25px;
+    padding-top: 20px;
+}
+.navbar-footer a{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    margin-right: 10px;
+}
+.navbar-footer li{
+  list-style-type: none;
+}
+.navbar-footer a:hover{
+    color: #50204E;
+    text-decoration: none;
+    font-size: 25px;
+    margin-right: 10px;
+}
+@media(max-width: 450px) {
+  .fiche-details {
+    width: 100%;
+    left: 51%;
+    transform: translateX(-50%);
+  }
+  .h2 {
+  color: #07bfe0; 
+  font-family: "Inknut Antiqua", serif;
+  font-size: 20px;
+}
+
+}
+@media (max-width: 850px) {
+  #burger { 
+    display: block;
+   }
+  .menu-container { 
+    display: none; 
+    width: 100%; 
+    background-color: #6c175f; }
+  .menu-container.show { 
+    display: block; 
+  }
+  .navbar {
+     flex-direction: column;
+     margin: 0;
+     padding: 0; }
+  .navbar a { 
+    text-align: center; 
+    padding: 12px; 
+    border-top: 1px solid #444;
+   }
+   .navbar a:hover { 
+    text-align: center; 
+    color: #100f0f;
+    padding: 12px; 
+    border-top: 1px solid #444;
+   }
+   .nav .logo img { 
+    height: 100px; 
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.flex{
+    display: flex;
+}
+.gap{
+    gap: 20px;
+}

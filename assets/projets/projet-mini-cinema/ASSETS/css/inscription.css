@@ -1,0 +1,93 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color:#101010;
+}
+.logo{
+    flex-direction: column;
+    margin: 20px;
+    }
+
+.logo img{
+    width: 200px;
+}
+.nav{
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.nav a{
+    color: rgb(233, 227, 227);
+    text-decoration: none;
+    font-size: 30px;
+    text-transform: capitalize;
+    margin-right: 15px;
+}
+.nav a:hover{
+    color: rgb(195, 10, 10);
+
+}
+.navbar{
+    flex-wrap: wrap;
+    height: 10px;
+    list-style: none;
+}
+.main-inscription h1{
+    color: white;
+    font-family: "Inknut Antiqua", serif;
+    font-size: 50px;
+}
+.main-inscription p{
+    color: rgb(218, 149, 20);
+    font-size: 25px;
+}
+.titre-inscription{
+    flex-direction: column;
+}
+.titre-image-inscription{
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.formulaire-inscritpion{
+    color:rgb(231, 225, 225);
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.form{
+    padding: 5px;
+    width: 50%;
+    
+    
+}
+.Valider-inscription{
+    width: 100px;
+    color: white;
+    background-color: grey;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    
+}
+.conditions{
+    color: white;
+}
+
+.image_garantie img{
+    width: 350px;
+    height: 350px;
+
+}
+
+
+
+.flex{
+    display: flex;
+}
+.gap{
+    gap: 10px;
+}

@@ -1,0 +1,221 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color:#101010;
+}
+.nav {
+   display: flex; 
+   justify-content: space-between; 
+   align-items: center; 
+   flex-wrap: wrap;
+   padding: 0 1rem; 
+  }
+.nav .logo img { 
+  height: 250px; 
+}
+#burgerEspace { 
+  display: none; 
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer; }
+.menu-container { 
+  display: block;
+ }
+.navbar {
+  gap: 1rem;
+  list-style: none;
+ }
+.navbar a { 
+  color: white; 
+  padding: 10px; 
+  text-decoration: none; 
+  display: block;
+  font-size: 30px;
+ }
+ .navbar a:hover { 
+  color: rgb(183, 15, 15); 
+  padding: 10px; 
+  text-decoration: none; 
+  display: block;
+  font-size: 30px;
+ }
+
+/* === Mobile === */
+@media (max-width: 850px) {
+  #burgerEspace { 
+    display: block;
+   }
+  .menu-container { 
+    display: none; 
+    width: 100%; 
+    background-color: #6c175f; }
+  .menu-container.show { 
+    display: block; 
+  }
+  .navbar {
+     flex-direction: column;
+     margin: 0;
+     padding: 0; }
+  .navbar a { 
+    text-align: center; 
+    padding: 12px; 
+    border-top: 1px solid #444;
+   }
+   .navbar a:hover { 
+    text-align: center; 
+    color: #100f0f;
+    padding: 12px; 
+    border-top: 1px solid #444;
+   }
+}
+.espace-membre{
+     flex-wrap: wrap;
+     flex-direction: column;
+     margin-left: 20px;
+    
+}
+.espace-membre h2{
+    color: white;
+    font-size: 30px;
+    font-family: "Inknut Antiqua", serif;
+
+}
+.titre-image-membre h1{
+    color: white;
+    font-size: 35px;
+    font-family: "Inknut Antiqua", serif;
+    margin-top: 50px;
+}
+.titre-image-membre p{
+    color: white;
+    font-size: 20px;
+}
+.motNom{
+    color: rgb(138, 28, 207);
+    text-transform: capitalize;
+}
+#reservations {
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-around;
+  flex-wrap: wrap;
+  
+}
+.image-reservation{
+    width: 100%;
+    height: auto;
+    border-radius: 10%;
+}
+.reservationClass {
+    background: #bf39c6;
+    padding: 10px;
+    border-radius: 6px;
+    width: 100%;
+    font-size: 20px;
+    color: white;
+}
+    strong {
+      color: #c01212;
+      font-family:  "Inknut Antiqua", serif;
+      display: block;
+      margin-bottom: 5px;
+      font-size: 30px;
+}
+    input[type="number"] {
+      width: 50px;
+      padding: 3px;
+      border-radius: 4px;
+      border: none;
+      background: #555;
+      color: #eee;
+      margin-left: 10px;
+    }
+    button {
+      background: #d0736d;
+      border: none;
+      color: white;
+      padding: 7px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-left: 10px;
+      
+    }
+    button:hover {
+      background: #db5b06;
+      color: black;
+    }
+.ticket{
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.ticket img{
+    width: 250px;
+    height: 250px;
+}
+/* Conteneur principal pour les cartes achat */
+.conteneurAchat {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  padding: 16px;
+  margin-bottom: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Effet au survol : soulève la carte */
+.conteneurAchat:hover {
+  transform: translateY(-4px);
+  
+}
+
+/* Image de l'achat */
+.conteneurAchat img.image-achat {
+  width: 20%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 16px;
+}
+
+/* Contenu texte (titre, quant, prix) */
+.conteneurAchat div {
+  display: flex;
+  flex-direction: column;
+}
+
+.conteneurAchat strong {
+  font-size: 1.1em;
+  margin-bottom: 4px;
+  
+}
+
+.conteneurAchat span {
+  color: R#433a3a;
+  
+}
+
+/* mobile */
+@media (max-width: 350px) {
+  .conteneurAchat {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .conteneurAchat img.image-achat {
+    width: 100%;
+    height: auto;
+    margin-bottom: 8px;
+  }
+}
+
+
+
+.flex{
+    display: flex;
+}

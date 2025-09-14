@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://votre-domaine/chemin/page" />
+
+    <link rel="shortcut icon" href="../../ASSETS/images/cinema.png"type="image/x-icon">
+    <link rel="stylesheet" href="../css/connexion.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Londrina+Shadow&display=swap" rel="stylesheet">
+    <title>Connexion</title>
+</head>
+<body>
+    <header>
+        <nav class="nav flex">
+            <div class="logo flex">
+                <img src="../images/logo-cinema.png" alt="logo mini cinéma fictif environnement gobelet coca, popcorn et un clape de cinéma"/>
+            </div>
+            <button id="burgerConnexion" aria-label="Ouvrir/fermer le menu">☰</button>
+            <div class="menu-container" id="menuContainerConnexion">
+                <ul class="navbar flex" id="menuConnexion">
+                    <li><a href="../../index.html">Accueil</a></li>
+                    <li><a href="espace-membre.html">Popcorn Club</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+        <main class="main-connexion ">
+            <div class="titre-connexion flex">
+                <div class="titre-image-connexion">
+                    <h1>Bienvenue sur Mini Cinéma</h1>
+                    <p>Connectez-vous pour découvrir les coulisses du cinéma et accéder à des contenus exclusifs.</p>
+                </div>
+                <div class="image_garantie">
+                    <img src="../../ASSETS/images/image-connexion.webp" alt="une image avec un paquet de pop corn et un gobelet avec du coca une bande cine">
+                </div>
+            </div>
+            <div class="connexion flex">
+                <form id="form-connexion" class="formulaire-connexion flex gap">
+                    <label for="name">Identifiant* :</label>
+                    <input type="text" id="name" class="form" required>
+                    <label for="password">Votre mot de passe* :</label>
+                    <input type="password" id="password" name="password" class="form" required>
+                    <input type="submit" value="Valider" class="Valider-connexion">
+                </form>
+            </div>
+        </main> 
+    <script src="../js/connexion.js"></script>
+</body>
+</html>
