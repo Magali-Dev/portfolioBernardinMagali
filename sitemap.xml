@@ -3,39 +3,31 @@
 
   <!-- Page d'accueil -->
   <url>
-    <loc>https://magali-bernardin-bichet-meteo-horoscope.sidathsoeun.fr/index.html</loc>
-    <lastmod>2025-06-19</lastmod>
+    <loc>http://portfolio.bernardinmagali.com/index.html</loc>
+    <lastmod>2025-09-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- Pages principales -->
   <url>
-    <loc>https://magali-bernardin-bichet-meteo-horoscope.sidathsoeun.fr/assets/html/meteo.html</loc>
-    <lastmod>2025-05-30</lastmod>
+    <loc>http://portfolio.bernardinmagali.com/projet.html</loc>
+    <lastmod>2025-09-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://magali-bernardin-bichet-meteo-horoscope.sidathsoeun.fr/assets/html/horoscope.html</loc>
-    <lastmod>2025-06-01</lastmod>
+    <loc>http://portfolio.bernardinmagali.com/a-propos.html</loc>
+    <lastmod>2025-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-<!--  Articles de blog  -->
-   <url>
-    <loc>https://magali-bernardin-bichet-meteo-horoscope.sidathsoeun.fr/assets/html/a-propos.html</loc>
-    <lastmod>2025-06-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
   <url>
-    <loc>https://magali-bernardin-bichet-meteo-horoscope.sidathsoeun.fr/assets/html/condition.html</loc>
-    <lastmod>2025-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
+    <loc>http://portfolio.bernardinmagali.com/contact.html</loc>
+    <lastmod>2025-09-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 
 </urlset>

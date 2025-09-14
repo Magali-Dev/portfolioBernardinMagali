@@ -1,493 +1,103 @@
-/* ============================= */
-        /* RESET ET BASE */
-        /* ============================= */
-        *, *::before, *::after {
-            box-sizing: border-box;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: var(--police-texte);
-            background: var(--couleur-fond);
-            color: var(--couleur-texte);
-            line-height: 1.6;
-            overflow-x: hidden;
-            text-rendering: optimizeSpeed;
-            background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
-            min-height: 100vh;
-        }
-
-        img, picture, video, canvas, svg {
-            display: block;
-            max-width: 100%;
-        }
-
-        input, button, textarea, select {
-            font: inherit;
-        }
-
-        ul, ol {
-            list-style: none;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: var(--transition);
-        }
-
-        /* Accessibilité : lien d'évitement */
-        .lien-evitement {
-            position: absolute;
-            top: -40px;
-            left: 0;
-            background: var(--couleur-primaire);
-            color: var(--couleur-fond);
-            padding: 8px;
-            z-index: 10000;
-            font-weight: 700;
-            border-radius: 0 0 4px 0;
-        }
-
-        .lien-evitement:focus {
-            top: 0;
-        }
-
-        /* ============================= */
-        /* LAYOUT */
-        /* ============================= */
-        .conteneur {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem 0;
-        }
-
-       
-        /* ============================= */
-        /* HERO À PROPOS */
-        /* ============================= */
-        .hero-a-propos {
-            text-align: center;
-            padding: 5rem 1rem;
-            min-height: 60vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-a-propos::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle, rgba(47, 129, 247, 0.08) 0%, transparent 70%);
-            z-index: -1;
-        }
-
-        .hero-a-propos::after {
-            content: '';
-            position: absolute;
-            bottom: -30%;
-            left: -30%;
-            width: 60%;
-            height: 60%;
-            background: radial-gradient(circle, rgba(110, 64, 201, 0.06) 0%, transparent 70%);
-            z-index: -1;
-        }
-
-        .titre-hero-a-propos {
-            font-family: var(--police-titre);
-            background: linear-gradient(135deg, var(--couleur-primaire) 0%, var(--couleur-accent) 50%, var(--couleur-accent-secondaire) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 1rem;
-            line-height: 1.1;
-            font-weight: 400;
-            font-size: clamp(2rem, 10vw, 10rem);
-        }
-         
-
-        .nom-hero-a-propos {
-            display: block;
-            font-size: clamp(4rem, 15vw, 10rem);
-            font-family: "Kapakana";
-            margin: 1rem 0;
-            color: var(--couleur-primaire);
-            font-weight: 400;
-        }
-
-        .texte-hero-a-propos {
-            max-width: 700px;
-            margin: 0 auto 2.5rem;
-            font-size: clamp(0.95rem, 2.5vw, 1.1rem);
-            color: var(--couleur-texte-secondaire);
-            line-height: 1.7;
-        }
-
-        /* ============================= */
-        /* BOUTONS */
-        /* ============================= */
-        .bouton, .bouton-projet {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--degrade-primaire);
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: var(--arrondi);
-            font-weight: 600;
-            transition: var(--transition);
-            box-shadow: var(--ombre);
-            border: none;
-            cursor: pointer;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-            font-size: 0.9rem;
-        }
-
-        .bouton::before, .bouton-projet::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: 0.5s;
-            z-index: -1;
-        }
-
-        .bouton:hover::before, .bouton-projet:hover::before {
-            left: 100%;
-        }
-
-        .bouton:hover, .bouton-projet:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--ombre-survol);
-        }
-
-        .bouton:active, .bouton-projet:active {
-            transform: translateY(0);
-        }
-
-        .bouton-secondaire {
-            background: transparent;
-            color: var(--couleur-texte);
-            border: 1.5px solid var(--couleur-primaire);
-        }
-
-        .bouton-secondaire:hover {
-            background: var(--couleur-primaire);
-            color: white;
-        }
-
-        /* ============================= */
-        /* CONTENU À PROPOS */
-        /* ============================= */
-        .contenu-a-propos {
-            padding: 4rem 0;
-        }
-
-        .section-a-propos {
-            background: var(--couleur-carte);
-            border-radius: var(--arrondi);
-            padding: 2.5rem;
-            margin-bottom: 2.5rem;
-            border: 1px solid rgba(47, 129, 247, 0.1);
-            backdrop-filter: blur(10px);
-            box-shadow: var(--ombre);
-        }
-
-        .section-a-propos h2 {
-            font-family: var(--police-titre);
-            font-size: clamp(1.8rem, 4vw, 2.2rem);
-            margin-bottom: 1.5rem;
-            color: var(--couleur-primaire);
-            position: relative;
-            padding-bottom: 0.5rem;
-            font-weight: 400;
-        }
-
-        .section-a-propos h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background: var(--couleur-primaire);
-            border-radius: 2px;
-        }
-
-        .section-a-propos p, .section-a-propos ul {
-            color: var(--couleur-texte-secondaire);
-            line-height: 1.8;
-            margin-bottom: 1rem;
-        }
-
-        .section-a-propos ul {
-            padding-left: 1.5rem;
-        }
-
-        .section-a-propos li {
-            margin-bottom: 0.5rem;
-            position: relative;
-        }
-
-        .section-a-propos li::before {
-            content: '•';
-            color: var(--couleur-primaire);
-            font-weight: bold;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em;
-        }
-
-        .cv-download {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .cv-download a {
-            display: inline-flex;
-            align-items: center;
-            background: var(--degrade-primaire);
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: var(--arrondi);
-            font-weight: 600;
-            transition: var(--transition);
-            box-shadow: var(--ombre);
-        }
-
-        .cv-download a:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--ombre-survol);
-        }
-
-        .contact-info {
-            text-align: center;
-            margin-bottom: 2rem;
-            color: var(--couleur-texte-secondaire);
-            font-size: 1.1rem;
-        }
-
-        /* ============================= */
-        /* PIED DE PAGE */
-        /* ============================= */
-        .pied-de-page {
-            background: linear-gradient(to top, #0a0e14 0%, #0d1117 100%);
-            padding: 3rem 0 1rem;
-            margin-top: 5rem;
-            border-top: 1px solid rgba(47, 129, 247, 0.1);
-        }
-
-        .contenu-pied-de-page {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .a-propos-pied img {
-            width: 50px;
-            margin-bottom: 1rem;
-            border-radius: 50%;
-            border: 2px solid var(--couleur-primaire);
-            box-shadow: 0 0 10px rgba(47, 129, 247, 0.3);
-        }
-
-        .a-propos-pied p {
-            color: var(--couleur-texte-secondaire);
-            line-height: 1.6;
-            font-size: 0.95rem;
-        }
-
-        .navigation-pied h4, .contact-pied h4 {
-            color: var(--couleur-primaire);
-            margin-bottom: 1.2rem;
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-
-        .navigation-pied a, .contact-pied p {
-            display: block;
-            margin-bottom: 0.8rem;
-            color: var(--couleur-texte-secondaire);
-            font-size: 0.95rem;
-        }
-
-        .navigation-pied a:hover {
-            color: var(--couleur-primaire);
-        }
-
-        .liens-sociaux {
-            display: flex;
-            gap: 0.8rem;
-            margin-top: 1.2rem;
-        }
-
-        .liens-sociaux a {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background: var(--degrade-primaire);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            transition: var(--transition);
-            font-size: 0.9rem;
-        }
-
-        .liens-sociaux a:hover {
-            transform: translateY(-2px);
-            background: var(--degrade-accent);
-            box-shadow: 0 4px 10px rgba(35, 134, 54, 0.3);
-        }
-
-        .bas-pied {
-            text-align: center;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            font-size: 0.85rem;
-            color: var(--couleur-texte-secondaire);
-        }
-
-        .bas-pied a {
-            color: var(--couleur-primaire);
-        }
-
-        .bas-pied a:hover {
-            color: var(--couleur-accent-secondaire);
-            text-decoration: underline;
-        }
-
-        /* ============================= */
-        /* RESPONSIVE */
-        /* ============================= */
-        @media (max-width: 992px) {
-            .conteneur {
-                width: 92%;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .bouton-menu {
-                display: flex;
-            }
-            
-            .liens-navigation {
-                display: none;
-                flex-direction: column;
-                background: rgba(13, 17, 23, 0.98);
-                position: fixed;
-                top: 0;
-                right: 0;
-                height: 100vh;
-                width: 70%;
-                max-width: 280px;
-                padding: 5rem 2rem 2rem;
-                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
-                z-index: 1000;
-                transform: translateX(100%);
-                transition: transform 0.3s ease-in-out;
-                backdrop-filter: blur(10px);
-                border-left: 1px solid rgba(47, 129, 247, 0.1);
-            }
-            
-            .liens-navigation[data-visible="true"] {
-                display: flex;
-                transform: translateX(0);
-            }
-            
-            .liens-navigation li {
-                margin: 1.2rem 0;
-            }
-            
-            .liens-navigation a {
-                font-size: 1.1rem;
-                padding: 0.5rem 0;
-            }
-            
-            .contenu-pied-de-page {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            
-            .liens-sociaux {
-                justify-content: center;
-            }
-            
-            .section-a-propos {
-                padding: 1.5rem;
-            }
-            
-            .titre-hero-a-propos {
-                font-size: clamp(3rem, 10vw, 8rem);
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero-a-propos {
-                padding: 3.5rem 1rem;
-            }
-            
-            .conteneur {
-                width: 95%;
-                padding: 1.5rem 0;
-            }
-            
-            .section-a-propos {
-                padding: 1.2rem;
-            }
-            
-            .titre-hero-a-propos {
-                font-size: clamp(2.5rem, 8vw, 6rem);
-            }
-        }
-        /* État caché pour le scroll */
-.hidden {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+/* Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-/* Quand l'élément est visible */
-.visible {
-  opacity: 1;
-  transform: translateY(0);
+* {
+  margin: 0;
+  padding: 0;
 }
 
-/* Effet hover subtil sur les sections */
-.section-a-propos:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(47, 129, 247, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.ligne {
-    display: flex;
-    gap: 2.5rem; /* espace entre colonnes */
-    flex-wrap: wrap; /* permet le retour à la ligne sur mobile */
+html {
+  scroll-behavior: smooth;
 }
 
-.colonne {
-    flex: 1;
-    min-width: 280px; /* largeur minimale pour mobile */
+body {
+  font-family: var(--police-texte);
+  background: var(--couleur-fond);
+  color: var(--couleur-texte);
+  line-height: 1.6;
+  overflow-x: hidden;
+  text-rendering: optimizeSpeed;
+  background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+  min-height: 100vh;
+}
+
+/* Accessibilité */
+.lien-evitement {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--couleur-primaire);
+  color: var(--couleur-fond);
+  padding: 8px;
+  z-index: 10000;
+  font-weight: 700;
+  border-radius: 0 0 4px 0;
+}
+.lien-evitement:focus {
+  top: 0;
+}
+
+/* Layout */
+.conteneur {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* Hero à propos */
+.hero-a-propos {
+  text-align: center;
+  padding: 5rem 1rem;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Boutons */
+.bouton, .bouton-projet {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--degrade-primaire);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--arrondi);
+  font-weight: 600;
+  transition: var(--transition);
+  box-shadow: var(--ombre);
+  border: none;
+  cursor: pointer;
+}
+
+/* Contenu À propos */
+.section-a-propos {
+  background: var(--couleur-carte);
+  border-radius: var(--arrondi);
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+  border: 1px solid rgba(47, 129, 247, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--ombre);
+}
+
+/* Pied de page */
+.pied-de-page {
+  background: linear-gradient(to top, #0a0e14 0%, #0d1117 100%);
+  padding: 3rem 0 1rem;
+  margin-top: 5rem;
+  border-top: 1px solid rgba(47, 129, 247, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .conteneur {
+    width: 92%;
+  }
 }

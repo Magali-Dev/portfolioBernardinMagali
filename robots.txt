@@ -12,7 +12,7 @@ Disallow: /tmp/
 Allow: /
 
 # Sitemaps (à adapter avec ton nom de domaine)
-Sitemap: https://magali-bernardin-bichet-meteo-horoscope.sidathsoeun.fr
+Sitemap: http://portfolio.bernardinmagali.com/
 
 # Règles spécifiques pour Googlebot
 User-agent: Googlebot
