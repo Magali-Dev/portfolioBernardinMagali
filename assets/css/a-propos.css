@@ -14,12 +14,11 @@ html {
 
 body {
     font-family: var(--police-texte);
-    background: var(--couleur-fond);
+    background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
     color: var(--couleur-texte);
     line-height: 1.6;
     overflow-x: hidden;
     text-rendering: optimizeSpeed;
-    background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
     min-height: 100vh;
 }
 
@@ -54,6 +53,7 @@ a {
     font-weight: 700;
     border-radius: 0 0 4px 0;
 }
+
 .lien-evitement:focus {
     top: 0;
 }
@@ -281,6 +281,18 @@ a {
     padding: 3rem 0 1rem;
     margin-top: 5rem;
     border-top: 1px solid rgba(47, 129, 247, 0.1);
+}
+
+/* Ligne contenant plusieurs colonnes */
+.ligne {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.section-a-propos.colonne {
+    flex: 1;
+    min-width: 250px;
 }
 
 /* Responsive */
