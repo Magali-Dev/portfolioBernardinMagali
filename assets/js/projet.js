@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          titre.classList.add('visible'); // ajoute la classe pour l'animation
+          titre.classList.add('visible'); 
           observer.unobserve(titre);
         }
       });

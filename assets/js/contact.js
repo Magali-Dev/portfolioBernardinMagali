@@ -127,7 +127,6 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// --- Réinitialisation messenger ---
 const closeBtn = document.getElementById('close-messenger');
 const messengerInterface = document.querySelector('.messenger-interface');
 
